@@ -4,7 +4,7 @@ ENV LLVM_VERSION 6.0
 
 RUN set -ex; \
       wget -qO - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -; \
-      echo "deb http://apt.llvm.org/stretch/ llvm-toolchain-stretch-${LLVM_VERSION} main" > /etc/apt/sources.list.d/llvm.list;
+      echo "deb http://apt.llvm.org/stretch/ llvm-toolchain-stretch main" > /etc/apt/sources.list.d/llvm.list;
 
 RUN set -ex; \
       apt-get update; \
