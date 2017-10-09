@@ -1,4 +1,5 @@
 FROM buildpack-deps:stretch
+LABEL maintainer="kevin.darcel@gmail.com"
 
 ENV LLVM_VERSION 4.0
 
