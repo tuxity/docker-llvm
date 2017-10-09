@@ -13,5 +13,9 @@ RUN set -ex; \
       ; \
       rm -rf /var/lib/apt/lists/*
 
-ENV CC clang-${LLVM_VERSION}
-ENV CXX clang++-${LLVM_VERSION}
+RUN set -ex; \
+      update-alternatives --install /usr/bin/clang clang /usr/bin/clang-${LLVM_VERSION} 999; \
+      update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-${LLVM_VERSION} 999
+
+ENV CC clang
+ENV CXX clang++
